@@ -5,12 +5,12 @@ import TextForm from './commponents/TextForm';
 import React from 'react'
 import { useState } from 'react';
 import Alerts from './commponents/Alerts';
-import About from './commponents/About';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+// import About from './commponents/About';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
   const [darkMode,SetDarkMode]=useState("light")
@@ -46,25 +46,25 @@ setTimeout(() => {
   } 
    return (
   
-<Router>
+     <div>
   <Alerts  alert={alert}/>
     <NavBar tittle="Text Tutils " mode={darkMode}
-    ToggleBtn={ToggleBtn}
-    contact="Contacts" />
-<Switch>
-          <Route path="/about" component={About}/>
-     <Route path="/">
-                
-             <TextForm mode={darkMode}/>
-
-          </Route>
-            
-          
-        </Switch>
-    </Router>
-  
-    
-  );
+    ToggleBtn={ToggleBtn} contact="Contacts" />
+<TextForm mode={darkMode}/>
+</div>
+);
 }
 
 export default App;
+// {/* <Router> */}
+// {/* <Switch> */}
+//     {/* //       <Route path="/about" component={About}/>
+//     // //  <Route path="/"> */}
+                
+//           {/* // </Route>
+            
+          
+//     //     </Switch> */}
+//     // </Router>
+  
+    
